@@ -1,0 +1,12 @@
+14.0 l/min
+13.0 l/min
+12.0 l/min
+11.0 l/min
+10.1 l/min
+10.1 l/min
+9.1 l/min
+7.9 l/min
+7.9 l/min
+7.0 l/min
+6.0 l/min
+5.0 l/min
