@@ -15,7 +15,7 @@ To get the flow resistance you have to know this angle.
 Determination of the resistance
 -------------------------------
 To understand the determination of the flow resistance and the dyamic buoyancy with the angle,
-read this `Determination <https://github.com/DuckNrOne/DetermFlowResistance/determ.pdf>`_. (an english version is in production ;).
+read this `Determination <https://github.com/DuckNrOne/DetermFlowResistance/blob/master/Determ.pdf>`_. (an english version is in production ;).
 
 Things to know
 ---------------
