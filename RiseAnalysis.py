@@ -38,12 +38,18 @@ def preview_video():
     capture = cv.VideoCapture(cv.samples.findFileOrKeep(inputVideo))
     if not capture.isOpened:
         print('Unable to open: ' + inputVideo)
+    
+    _, frame_temp = capture.read()
+    height, width, _ = frame_temp.shape    
+    height = 960/height
+    width = 1920/width
 
     while True:
         _, frame = capture.read()
         if frame is None:
             break
 
+        frame = cv.resize(frame, None, fx=height, fy=height)
         cv.imshow('Preview', show_preview_frame(frame))
 
         if cv.waitKey(1) & 0xFF == ord('q'):
@@ -51,7 +57,7 @@ def preview_video():
 
 
 lower_black = np.array([0, 0, 0])
-upper_black = np.array([80, 90, 100])
+upper_black = np.array([90, 110, 110])
 
 
 def show_preview_frame(img):
@@ -91,12 +97,27 @@ def analyse_video(inputVideo: str):
     if not capture.isOpened:
         print('Unable to open: ' + inputVideo)
 
+    # First step to resize preview image
     _, frame_temp = capture.read()
+    height, width, _ = frame_temp.shape
+    height = 960/height
+    width = 1920/width
+    frame_temp = cv.resize(frame_temp, None, fx=height, fy=width)
+
     cv.imshow('Reference Point', frame_temp)
     cv.setMouseCallback('Reference Point', click_and_crop)
     cv.waitKey()
     cv.destroyWindow('Reference Point')
 
+    # Resize reference points
+    """
+    global refPt
+    refPt[0][0] = int(refPt[0][0] / width)
+    refPt[1][0] = int(refPt[1][0] / width)
+    refPt[0][1] = int(refPt[0][1] / height)
+    refPt[1][1] = int(refPt[1][1] / height)
+    print(refPt)
+    """
     frame_values = {}
     frames = 0
     fps = int(capture.get(cv.CAP_PROP_FRAME_COUNT))
@@ -108,6 +129,7 @@ def analyse_video(inputVideo: str):
         if frame is None:
             break
 
+        frame = cv.resize(frame, None, fx=height, fy=width)
         if frames % 4 == 0:
             frame_values[frames] = analysis_frame(frame)
 
@@ -115,6 +137,9 @@ def analyse_video(inputVideo: str):
         if (frames/fps) * 100 > percent:
             print(str(percent) + "%")
             percent += 10
+            
+        if cv.waitKey(1) & 0xFF == ord('q'):
+            break
 
     frame_values = {k: v for k, v in frame_values.items() if v != 8000}
 
