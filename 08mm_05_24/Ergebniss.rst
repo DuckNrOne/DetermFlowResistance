@@ -1,5 +1,5 @@
 Auswertung vom 24.5.2019
-=======================
+========================
 Ausgangswerte:
 --------------
 - Durchmesser der Kugel: 8mm

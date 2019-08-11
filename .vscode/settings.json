@@ -1,3 +1,4 @@
 {
-    "python.pythonPath": "C:\\Users\\Antony\\Anaconda3\\python.exe"
+    "python.pythonPath": "C:\\Users\\Antony\\Anaconda3\\python.exe",
+    "restructuredtext.confPath": "${workspaceFolder}\\venv\\Lib\\site-packages\\pbr\\tests\\testpackage\\doc\\source"
 }
