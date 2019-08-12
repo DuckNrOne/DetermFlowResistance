@@ -1,9 +1,10 @@
-Auswertung vom 5.7.2019
+Auswertung vom 9.8.2019
 =======================
 Ausgangswerte:
 --------------
 - Durchmesser der Kugel: 8.0mm
-- Gewicht der Kugel: 0.0002675kg
+- Gewicht der Kugel: 0.0003994kg
+- Temperatur: Warm
 
 Messung: 14.0 l/min - 2
 -----------------------
@@ -151,21 +152,17 @@ Messung: 5.0 l/min - 2
 
 Auswertung
 ==========
+| Auf Grund von großen Abweichungen zwischen den Messwerten wurde die Messungen folgende Messungen nicht genutzt:
+
+- 14.0l/min - 1
+- 14.0l/min - 2
+- 13.1l/min
+
 Ermittlung von a und b
 ----------------------
 .. image:: w2_tan.png
     :width: 80%
 
-.. math::
-    a =
-    b =
-    R^2 =
 
-Winkel und Strömungsgeschwindigkeit
-.. image:: deg_w.png
-    :width: 80%
 
-Strömungswiderstand
--------------------
-.. image:: w_fw.png
-    :width: 80%
+
