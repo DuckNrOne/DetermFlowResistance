@@ -6,7 +6,7 @@ Ausgangswerte:
 - Gewicht der Kugel: 0.0002675kg
 
 Messung: 14.0 l/min - 2
--------------------
+-----------------------
 .. image:: 14/Histo1.png
    :width: 40%
 
@@ -18,7 +18,7 @@ Messung: 14.0 l/min - 2
 | Bemerkung: NICHT IN DEN MESSERGEBNISSEN
 
 Messung: 14.0 l/min - 2
--------------------
+-----------------------
 .. image:: 14/Histo2.png
    :width: 40%
 
@@ -66,7 +66,7 @@ Messung: 11.0 l/min
 | Bemerkung: -
 
 Messung: 10.0 l/min
-----------------------
+--------------------
 .. image:: 10/Histo.png
    :width: 40%
 
@@ -77,8 +77,8 @@ Messung: 10.0 l/min
 | Standardabweichung: 1.065598°
 | Bemerkung: -
 
-Messung: 9.0 l/min - 2
-----------------------
+Messung: 9.0 l/min
+------------------
 .. image:: 09/Histo.png
    :width: 40%
 

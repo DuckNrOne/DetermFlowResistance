@@ -226,7 +226,15 @@ def create_data(dict_degree: dict, name: str):
     plt.xlabel('Frame')
     plt.ylabel('Angle [deg]')
     plt.show()
-    plt.hist(dict_degree.values(), normed=True, bins=15)
+    plt.hist(dict_degree.values(), normed=True)
+    
+    # xt = plt.xticks()[0]  
+    # xmin, xmax = min(xt), max(xt)  
+    # lnspc = np.linspace(xmin, xmax, len(dict_degree.values()))    
+    # m, s = stats.norm.fit(dict_degree.values())
+    # pdf_g = stats.norm.pdf(lnspc, m, s) 
+    # plt.plot(lnspc, pdf_g, label="Norm")
+    
     plt.xlabel('Angle [deg]')
     plt.show()
 
